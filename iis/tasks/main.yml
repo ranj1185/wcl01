@@ -14,6 +14,15 @@
   with_items:
   - Web-Server
   - Web-Asp-Net45
+  
+- name: install .NET Framework 3.5
+  win_dsc:
+    resource_name: WindowsFeature
+    Name: '{{item}}'
+    Ensure: Present
+    IncludeAllSubFeature: True 
+  with_items:
+  - NET-Framework-Features
 
 - name: setup web content
   win_dsc:
