@@ -58,6 +58,7 @@
       Basic: yes
       Digest: no
       Windows: yes
+
 - name: Simple GET operation
   aws_s3:
     bucket: tmk-wcl01
