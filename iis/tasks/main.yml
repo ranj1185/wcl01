@@ -32,7 +32,7 @@
     resource_name: xWebsite
     Name: NewIISSite
     State: Started
-    PhysicalPath: C:\inetpub\IISSite\index.html
+    PhysicalPath: C:\inetpub\IISSite\
     BindingInfo:
  #   - Protocol: https
  #     Port: 8443
