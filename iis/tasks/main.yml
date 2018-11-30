@@ -59,9 +59,6 @@
       Digest: no
       Windows: yes
 
-- name: Simple GET operation
-  aws_s3:
-    bucket: tmk-wcl01
-    object: /tmk-wcl01/Notepad%2B%2B+v7.5.5.msi
-    dest: C:\Users\Administrator\
-    mode: get
+- name: check command works for windows 
+  win_command: whoami
+  register: whoami_out
