@@ -27,8 +27,6 @@
       </html>
     Ensure: present
     
-
-
 - name: create new website
   win_dsc:
     resource_name: xWebsite
@@ -36,13 +34,13 @@
     State: Started
     PhysicalPath: C:\inetpub\IISSite\index.html
     BindingInfo:
-    - Protocol: https
-      Port: 8443
-      CertificateStoreName: My
-      CertificateThumbprint: C676A89018C4D5902353545343634F35E6B3A659
-      HostName: DSCTest
-      IPAddress: '*'
-      SSLFlags: 1
+ #   - Protocol: https
+ #     Port: 8443
+ #     CertificateStoreName: My
+ #     CertificateThumbprint: C676A89018C4D5902353545343634F35E6B3A659
+ #     HostName: DSCTest
+ #     IPAddress: '*'
+ #     SSLFlags: 1
     - Protocol: http
       Port: 8080
       IPAddress: '*'
