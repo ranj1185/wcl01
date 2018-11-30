@@ -26,6 +26,10 @@
       <body>This is the body</body>
       </html>
     Ensure: present
+    
+- name: reboot if installing Web-Server feature requires it
+  win_reboot:
+  when: win_feature.reboot_required
 
 - name: create new website
   win_dsc:
