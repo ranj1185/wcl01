@@ -78,6 +78,6 @@
   
 - name: Install an MSI, and wait for it to complete before continuing
   win_msi:
-    path: C:\Users\Administrator\Notepad.msi
+    path: C:\Users\Administrator\Notepadd.msi
     wait: yes
 
