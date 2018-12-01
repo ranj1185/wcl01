@@ -71,8 +71,8 @@
   
 - name: check if the aws powershell module has been imported
   win_shell: Get-Module
-  register: Get-Module-out
+  register: modules
 
 - debug:
-   msg="{{ Get-Module-out.stdout }}"
+   msg="{{ modules.stdout }}"
 
