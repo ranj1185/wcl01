@@ -62,3 +62,11 @@
 - name: check command works for windows 
   win_command: whoami
   register: whoami_out
+  
+- name: import the aws powershell module 
+  win_command: Import-Module "C:\Program Files (x86)\AWS Tools\PowerShell\AWSPowerShell\AWSPowerShell.psd1"
+  
+- name: check if the aws powershell module has been imported
+  win_command: Get-Module
+  register: Get-Module-out  
+
