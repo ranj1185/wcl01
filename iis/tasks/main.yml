@@ -75,4 +75,9 @@
   
 - name: downlad the msi files
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Notepad.msi -LocalFile Notepadd.msi
+  
+- name: Install an MSI, and wait for it to complete before continuing
+  win_msi:
+    path: C:\Users\Administrator\Notepad.msi
+    wait: yes
 
