@@ -65,14 +65,14 @@
   
 - debug:
    msg="{{ whoami_out.stdout }}"
-  
-- name: import the aws powershell module 
-  win_shell: echo $profile C:\Users\{username}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-  
-- name: check if the aws powershell module has been imported
-  win_shell: Get-Module
+   
+- name: check if the aws powershell module exists and what s3 commands are available
+  win_shell: Get-Command -Module AWSPowerShell | select-string s3
   register: modules
-
+  
 - debug:
    msg="{{ modules.stdout }}"
+  
+- name: downlad the msi files
+  win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Notepad.msi -LocalFile Notepadd.msi
 
