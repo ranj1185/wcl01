@@ -67,7 +67,7 @@
    msg="{{ whoami_out.stdout }}"
   
 - name: import the aws powershell module 
-  win_shell: Import-Module AWSPowerShell
+  win_shell: echo $profile C:\Users\{username}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
   
 - name: check if the aws powershell module has been imported
   win_shell: Get-Module
