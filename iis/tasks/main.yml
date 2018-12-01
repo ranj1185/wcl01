@@ -67,7 +67,7 @@
    msg="{{ whoami_out.stdout }}"
   
 - name: import the aws powershell module 
-  win_command: Import-Module AWSPowerShell
+  win_shell: Import-Module AWSPowerShell
   
 - name: check if the aws powershell module has been imported
   win_command: Get-Module
