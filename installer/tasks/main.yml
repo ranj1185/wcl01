@@ -13,7 +13,7 @@
 
 - name: Install visual c++ 2013
   win_package:
-    path: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
+    path: C:\Users\Administrator\vcredist_x64.exe
     product_id: vcredist_x64
     state: present
 
