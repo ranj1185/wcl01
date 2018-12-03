@@ -10,11 +10,27 @@
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x86.exe
     dest: C:\Users\Administrator\
+    
+- name: Download Microsoft Visual 2013 to specified path
+  win_get_url:
+    url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
+    dest: C:\Users\Administrator\
 
-- name: Install visual c++ 2013
+- name: Install visual c++ 2013 64 bit
   win_package:
     path: C:\Users\Administrator\vcredist_x64.exe
     creates_path: C:\Program Files\Microsoft Visual C++ 2013\vcredist_x86.exe
+    state: present
+    arguments:
+    - /install
+    - /passive
+    - /norestart
+    
+    
+- name: Install visual c++ 2013 32 bit
+  win_package:
+    path: C:\Users\Administrator\vcredist_x86.exe
+    creates_path: C:\Program Files\Microsoft Visual C++ 2013\vcredist_x64.exe
     state: present
     arguments:
     - /install
