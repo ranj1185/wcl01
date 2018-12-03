@@ -8,7 +8,7 @@
 
 - name: Download Microsoft Visual 2013 to specified path
   win_get_url:
-    url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe 
+    url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe    
     dest: C:\Users\Administrator\
 
 - name: Install visual c++ 2013
