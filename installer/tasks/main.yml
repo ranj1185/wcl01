@@ -48,3 +48,8 @@
 #    path: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe
 #    creates_path: C:\Program Files\CyberArk\cyberark.exe
 #    state: present
+
+- name: Install visual c++ 2013 64 bit
+  win_package:
+    path: https://files.trendmicro.com/products/deepsecurity/en/11.0/Notifier-Windows-11.0.0-439.i386.msi
+    state: present
