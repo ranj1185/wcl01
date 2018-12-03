@@ -55,7 +55,7 @@
 #    creates_path: C:\Program Files\CyberArk\cyberark.exe
 #    state: present
 
-- name: Install visual c++ 2013 64 bit
+- name: Install trend micro av notifier 32 bit
   win_package:
     path: C:\Users\Administrator\Notifier-Windows-11.0.0-439.i386.msi
     state: present
