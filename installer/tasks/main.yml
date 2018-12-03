@@ -6,7 +6,7 @@
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Windows-Rls-v10.5.zip -LocalFile C:\Users\Administrator\Windows-Rls-v10.5.zip
 
 
-- name: Download earthrise.jpg to specified path
+- name: Download Microsoft Visual 2013 to specified path
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe 
     dest: C:\Users\Administrator\
