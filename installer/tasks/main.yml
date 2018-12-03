@@ -27,8 +27,8 @@
 #    dest: C:\Users\Administrator\Windows-Rls-v10.5
 
 
-- name: Install cyberark agent
-  win_package:
-    path: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe
-    creates_path: C:\Program Files\CyberArk\cyberark.exe
-    state: present
+#- name: Install cyberark agent
+#  win_package:
+#    path: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe
+#    creates_path: C:\Program Files\CyberArk\cyberark.exe
+#    state: present
