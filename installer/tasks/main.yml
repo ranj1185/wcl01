@@ -8,8 +8,8 @@
 
 - name: Download earthrise.jpg to specified path
   win_get_url:
-    url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exeg
-    dest: C:\Users\Administrator\vcredist_x64.exeg
+    url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe 
+    dest: C:\Users\Administrator\
 
 - name: Unzip a the zip file
   win_unzip:
