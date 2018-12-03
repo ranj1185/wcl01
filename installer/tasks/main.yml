@@ -4,3 +4,9 @@
 
 - name: downlad the cyberark installation zip files 
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Windows-Rls-v10.5.zip -LocalFile C:\Users\Administrator\Windows-Rls-v10.5.zip
+
+
+- name: Unzip a the zip file
+  win_unzip:
+    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
+    dest: C:\Users\Administrator\Windows-Rls-v10.5
