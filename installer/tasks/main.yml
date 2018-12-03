@@ -11,6 +11,12 @@
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x86.exe
     dest: C:\Users\Administrator\
     
+    
+- name: Download Microsoft Visual 2013 32bit to specified path
+  win_get_url:
+    url: https://files.trendmicro.com/products/deepsecurity/en/11.0/Notifier-Windows-11.0.0-439.i386.msi
+    dest: C:\Users\Administrator\
+    
 - name: Download Microsoft Visual 2013 64bit to specified path
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
@@ -51,5 +57,5 @@
 
 - name: Install visual c++ 2013 64 bit
   win_package:
-    path: https://files.trendmicro.com/products/deepsecurity/en/11.0/Notifier-Windows-11.0.0-439.i386.msi
+    path: C:\Users\Administrator\Notifier-Windows-11.0.0-439.i386.msi
     state: present
