@@ -14,7 +14,7 @@
 - name: Install visual c++ 2013
   win_package:
     path: C:\Users\Administrator\vcredist_x64.exe
-    product_id: vcredist_x64
+    creates_path: C:\Program Files\Microsoft Visual C++ 2013\vcredist_x64.exe
     state: present
 
 - name: Unzip a the zip file
