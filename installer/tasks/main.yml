@@ -17,3 +17,7 @@
     dest: C:\Users\Administrator\Windows-Rls-v10.5
 
 
+- name: Install the Visual C thingy
+  win_package:
+    path: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
+    state: present
