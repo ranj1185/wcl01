@@ -6,12 +6,12 @@
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Windows-Rls-v10.5.zip -LocalFile C:\Users\Administrator\Windows-Rls-v10.5.zip
 
 
-- name: Download Microsoft Visual 2013 to specified path
+- name: Download Microsoft Visual 2013 32bit to specified path
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x86.exe
     dest: C:\Users\Administrator\
     
-- name: Download Microsoft Visual 2013 to specified path
+- name: Download Microsoft Visual 2013 64bit to specified path
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
     dest: C:\Users\Administrator\
@@ -37,7 +37,7 @@
     - /passive
     - /norestart
 
-#- name: Unzip a the zip file
+#- name: Unzip a the cyberark zip file
 #  win_unzip:
 #    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
 #    dest: C:\Users\Administrator\Windows-Rls-v10.5
