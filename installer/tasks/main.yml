@@ -11,14 +11,14 @@
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe 
     dest: C:\Users\Administrator\
 
+- name: Install visual c++ 2013
+  win_package:
+    path: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
+    product_id: vcredist_x64
+    state: present
+
 - name: Unzip a the zip file
   win_unzip:
     src: C:\Users\Administrator\Windows-Rls-v10.5.zip
     dest: C:\Users\Administrator\Windows-Rls-v10.5
 
-
-- name: Install visual c++ 2013
-  win_package:
-    path: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
-    prdouct_id: vcredist_x64
-    state: present
