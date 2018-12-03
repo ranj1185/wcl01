@@ -16,6 +16,10 @@
     path: C:\Users\Administrator\vcredist_x64.exe
     creates_path: C:\Program Files\Microsoft Visual C++ 2013\vcredist_x64.exe
     state: present
+    arguments:
+    - /install
+    - /passive
+    - /norestart
 
 - name: Unzip a the zip file
   win_unzip:
