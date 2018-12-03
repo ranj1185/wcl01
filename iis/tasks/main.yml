@@ -74,7 +74,7 @@
    msg="{{ modules.stdout }}"
   
 - name: downlad the msi files
-  win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Notepad.msi -LocalFile Notepadd.msi
+  win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Notepad.msi -LocalFile C:\Users\Administrator\Notepadd.msi
   
 - name: Install an MSI, and wait for it to complete before continuing
   win_msi:
