@@ -21,13 +21,13 @@
     - /passive
     - /norestart
 
-- name: Unzip a the zip file
-  win_unzip:
-    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
-    dest: C:\Users\Administrator\Windows-Rls-v10.5
+#- name: Unzip a the zip file
+#  win_unzip:
+#    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
+#    dest: C:\Users\Administrator\Windows-Rls-v10.5
 
 
-- name: Install visual c++ 2013
+- name: Install cyberark agent
   win_package:
     path: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe
     creates_path: C:\Program Files\CyberArk\cyberark.exe
