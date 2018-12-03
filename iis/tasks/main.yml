@@ -77,7 +77,7 @@
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Notepad.msi -LocalFile C:\Users\Administrator\Notepadd.msi
   
 - name: Install an MSI, and wait for it to complete before continuing
-  win_msi:
+  win_package:
     path: C:\Users\Administrator\Notepadd.msi
-    wait: yes
+    state: present
 
