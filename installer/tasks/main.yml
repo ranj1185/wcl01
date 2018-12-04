@@ -6,15 +6,9 @@
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Windows-Rls-v10.5.zip -LocalFile C:\Users\Administrator\Windows-Rls-v10.5.zip
 
 
-- name: Download Microsoft Visual 2013 32bit to specified path
+- name: Download Microsoft Visual 2013 64bit to specified path
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x86.exe
-    dest: C:\Users\Administrator\
-    
-    
-- name: Download Microsoft Visual 2013 32bit to specified path
-  win_get_url:
-    url: https://files.trendmicro.com/products/deepsecurity/en/11.0/Notifier-Windows-11.0.0-439.i386.msi
     dest: C:\Users\Administrator\
     
 - name: Download Microsoft Visual 2013 64bit to specified path
@@ -48,28 +42,27 @@
 #    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
 #    dest: C:\Users\Administrator\Windows-Rls-v10.5
 
-
 #- name: Install cyberark agent
 #  win_package:
 #    path: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe
 #    creates_path: C:\Program Files\CyberArk\cyberark.exe
 #    state: present
 
-- name: Install trend micro av notifier 32 bit
-  win_shell: |
-    [Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
-    $env:LogPath = "$env:appdata\Trend Micro\Deep Security Agent\installer"
-    New-Item -path $env:LogPath -type directory
-    Start-Transcript -path "$env:LogPath\dsa_deploy.log" -append
-    echo "$(Get-Date -format T) - DSA download started"
-    (New-Object System.Net.WebClient).DownloadFile("https://10.200.12.43:4119/software/agent/Windows/x86_64/", "$env:temp\agent.msi")
-    echo "$(Get-Date -format T) - Downloaded File Size:" (Get-Item "$env:temp\agent.msi").length
-    echo "$(Get-Date -format T) - DSA install started"
-    echo "$(Get-Date -format T) - Installer Exit Code:" (Start-Process -FilePath msiexec -ArgumentList "/i $env:temp\agent.msi /qn ADDLOCAL=ALL /l*v `"$env:LogPath\dsa_install.log`"" -Wait -PassThru).ExitCode 
-    echo "$(Get-Date -format T) - DSA activation started"
-    Start-Sleep -s 50
-    & $Env:ProgramFiles"\Trend Micro\Deep Security Agent\dsa_control" -r
-    & $Env:ProgramFiles"\Trend Micro\Deep Security Agent\dsa_control" -a dsm://10.200.12.43:4120/ "policyid:20" "relaygroupid:1"
-    Stop-Transcript
-    echo "$(Get-Date -format T) - DSA Deployment Finished"
+#- name: Install trend micro av notifier 32 bit
+#  win_shell: |
+#    [Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
+#    $env:LogPath = "$env:appdata\Trend Micro\Deep Security Agent\installer"
+#    New-Item -path $env:LogPath -type directory
+#    Start-Transcript -path "$env:LogPath\dsa_deploy.log" -append
+#    echo "$(Get-Date -format T) - DSA download started"
+#    (New-Object System.Net.WebClient).DownloadFile("https://10.200.12.43:4119/software/agent/Windows/x86_64/", "$env:temp\agent.msi")
+#    echo "$(Get-Date -format T) - Downloaded File Size:" (Get-Item "$env:temp\agent.msi").length
+#    echo "$(Get-Date -format T) - DSA install started"
+#    echo "$(Get-Date -format T) - Installer Exit Code:" (Start-Process -FilePath msiexec -ArgumentList "/i $env:temp\agent.msi /qn ADDLOCAL=ALL /l*v `"$env:LogPath\dsa_install.log`"" -Wait -PassThru).ExitCode 
+#    echo "$(Get-Date -format T) - DSA activation started"
+#    Start-Sleep -s 50
+#    & $Env:ProgramFiles"\Trend Micro\Deep Security Agent\dsa_control" -r
+#    & $Env:ProgramFiles"\Trend Micro\Deep Security Agent\dsa_control" -a dsm://10.200.12.43:4120/ "policyid:20" "relaygroupid:1"
+#    Stop-Transcript
+#    echo "$(Get-Date -format T) - DSA Deployment Finished"
 
