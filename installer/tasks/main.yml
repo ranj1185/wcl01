@@ -5,6 +5,9 @@
 - name: downlad the cyberark installation zip files 
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Windows-Rls-v10.5.zip -LocalFile C:\Users\Administrator\Windows-Rls-v10.5.zip
   tags: windows-inst
+  
+- name: downlad the cyberark installation zip files 
+  win_shell: Copy-S3Object -BucketName tmk-wcl01 -key linuxSelinux.txt -LocalFile C:\Users\Administrator\linuxSelinux.txt
 
 
 - name: Download Microsoft Visual 2013 64bit to specified path
