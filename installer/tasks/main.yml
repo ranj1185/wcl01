@@ -79,7 +79,7 @@
 #    echo "$(Get-Date -format T) - DSA Deployment Finished"
 
 - name: check if lsb_release is installed 
-  command : lsb_release –d
+  shell : lsb_release –d
   register: lsb
   tags: ['linux']
   
