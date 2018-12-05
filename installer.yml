@@ -2,6 +2,6 @@
 
 - hosts: all
   tags:
-    - windows-installer
+    - windows
   roles: 
      - installer
