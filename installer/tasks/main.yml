@@ -84,6 +84,6 @@
   tags: ['linux']
   
 - debug: 
-  msg="{{ lsb.stdout }}"
+   msg="{{ lsb.stdout }}"
   tags: ['linux']
 
