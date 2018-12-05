@@ -43,7 +43,7 @@
 #    dest: C:\Users\Administrator\Windows-Rls-v10.5
 
 - name: Silent install of cyberark agent
-win_shell: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe /S /f1"C:\Users\Administrator\Windows-Rls-v10.5\Windows\silent.iss" /v n
+  win_shell: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe /S /f1"C:\Users\Administrator\Windows-Rls-v10.5\Windows\silent.iss" /v n
 
 #- name: Install cyberark agent
 #  win_package:
