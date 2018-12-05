@@ -37,10 +37,10 @@
     - /passive
     - /norestart
 
-#- name: Unzip a the cyberark zip file
-#  win_unzip:
-#    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
-#    dest: C:\Users\Administrator\Windows-Rls-v10.5
+- name: Unzip a the cyberark zip file
+  win_unzip:
+    src: C:\Users\Administrator\Windows-Rls-v10.5.zip
+    dest: C:\Users\Administrator\
 
 #- name: Install cyberark agent
 #  win_package:
