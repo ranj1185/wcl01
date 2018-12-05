@@ -40,7 +40,7 @@
 - name: Unzip a the cyberark zip file
   win_unzip:
     src: C:\Users\Administrator\Windows-Rls-v10.5.zip
-    dest: C:\Users\Administrator\
+    dest: C:\Users\Administrator\Windows-Rls-v10.5
 
 #- name: Install cyberark agent
 #  win_package:
