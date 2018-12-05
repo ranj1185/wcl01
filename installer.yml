@@ -3,5 +3,4 @@
 - hosts: all
   roles: 
      - installer
-  tags: 
-    - windows
+  tags: [ 'web', 'foo' ]
