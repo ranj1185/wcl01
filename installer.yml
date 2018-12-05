@@ -1,7 +1,5 @@
 ---
 
 - hosts: all
-  tags:
-    - windows
   roles: 
      - installer
