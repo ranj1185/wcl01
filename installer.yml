@@ -1,5 +1,7 @@
 ---
 
 - hosts: all
+  tags:
+    - windows-installer
   roles: 
-     - {role: installer, tags: [ 'windows-installer']}
+     - installer
