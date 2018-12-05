@@ -83,6 +83,7 @@
   register: lsb
   tags: ['linux']
   
-- debug: lsb.stdout
+- debug: 
+  msg="{{ lsb.stdout }}"
   tags: ['linux']
 
