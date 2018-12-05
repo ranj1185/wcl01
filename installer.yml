@@ -2,7 +2,5 @@
 
 - hosts: all
   roles: 
-     - installer
-  
-  
-- tags: [ 'web', 'foo' ]
+    - role: installer
+      tags: [ 'windows', 'linux' ]
