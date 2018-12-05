@@ -80,5 +80,9 @@
 
 - name: check if lsb_release is installed 
   command : lsb_release –d
+  register: lsb
+  tags: ['linux']
+  
+- debug: lsb.stdout
   tags: ['linux']
 
