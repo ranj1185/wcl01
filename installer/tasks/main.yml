@@ -4,7 +4,7 @@
 
 - name: downlad the cyberark installation zip files 
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key Windows-Rls-v10.5.zip -LocalFile C:\Users\Administrator\Windows-Rls-v10.5.zip
-  tags: windows-inst
+  tags: ['windows']
   
 - name: downlad the cyberark installation zip files 
   win_shell: Copy-S3Object -BucketName tmk-wcl01 -key linuxSelinux.txt -LocalFile C:\Users\Administrator\linuxSelinux.txt
@@ -14,13 +14,13 @@
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x86.exe
     dest: C:\Users\Administrator\
-  tags: windows-inst
+  tags: ['windows']
     
 - name: Download Microsoft Visual 2013 64bit to specified path
   win_get_url:
     url: http://download.microsoft.com/download/0/5/6/056dcda9-d667-4e27-8001-8a0c6971d6b1/vcredist_x64.exe
     dest: C:\Users\Administrator\
-  tags: windows-inst
+  tags: ['windows-installer']
 
 - name: Install visual c++ 2013 64 bit
   win_package:
@@ -31,7 +31,7 @@
     - /install
     - /passive
     - /norestart
-  tags: windows-inst
+  tags: ['windows']
     
     
 - name: Install visual c++ 2013 32 bit
@@ -43,7 +43,7 @@
     - /install
     - /passive
     - /norestart
-  tags: windows-inst
+  tags: ['windows']
 
 #- name: Unzip a the cyberark zip file
 #  win_unzip:
@@ -52,7 +52,7 @@
 
 - name: Silent install of cyberark agent
   win_shell: C:\Users\Administrator\Windows-Rls-v10.5\Windows\setup.exe /S /f1"C:\Users\Administrator\Windows-Rls-v10.5\Windows\silent.iss" /v n
-  tags: windows-inst
+  tags: ['windows']
 
 #- name: Install cyberark agent
 #  win_package:
