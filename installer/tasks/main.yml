@@ -80,4 +80,5 @@
 
 - name: check if lsb_release is installed 
   command : lsb_release –d
+  tags: linux
 
