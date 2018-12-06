@@ -156,7 +156,7 @@
       No
       Yes
 
-      No" | /cyberark/RHELinux64Rls-v10.5/RHELinux\ x64/CreateCredFile user.cred
+      No" | /cyberark/RHELinux64Rls-v10.5/RHELinux\ x64/CreateCredFile /cyberark/RHELinux64Rls-v10.5/RHELinux\ x64/user.cred
   tags: ['linux']
   tags: ['current']
 
