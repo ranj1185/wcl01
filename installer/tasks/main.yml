@@ -144,4 +144,19 @@
      path: /cyberark/RHELinux64Rls-v10.5/RHELinux x64/CreateCredFile
      mode: 0777
   tags: ['linux']
+  
+- name: run the createCredFile to generate user.cred
+  shell |
+      echo "Administrator2
+      test123
+      No
+      No
+
+
+      No
+      Yes
+
+      No" | /cyberark/RHELinux64Rls-v10.5/RHELinux\ x64/CreateCredFile user.cred
+  tags: ['linux']
   tags: ['current']
+
