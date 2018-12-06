@@ -125,11 +125,16 @@
   command: aws s3 cp s3://tmk-wcl01/RHELinux\ x64-Rls-v10.5.zip /cyberark/
   tags: ['linux']
   
-  
+- name: ensure tomcat directory exists
+  file:
+    path: /cyberark/RHELinux64Rls-v10.5
+    state: directory
+    mode: 0775
+  tags: ['linux']
+    
 - name: Extract foo.tgz into /var/lib/foo
   unarchive:
     src: /cyberark/RHELinux\ x64-Rls-v10.5.zip
-    creates: /cyberark/RHELinux64Rls-v10.5
     dest: /cyberark/RHELinux64Rls-v10.5
     remote_src: yes
   tags: ['linux']
