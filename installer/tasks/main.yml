@@ -146,7 +146,7 @@
   tags: ['linux']
   
 - name: run the createCredFile to generate user.cred
-  shell |
+  shell: |
       echo "Administrator2
       test123
       No
