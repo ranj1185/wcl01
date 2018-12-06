@@ -138,3 +138,4 @@
     dest: /cyberark/RHELinux64Rls-v10.5
     remote_src: yes
   tags: ['linux']
+  tags: ['current']
