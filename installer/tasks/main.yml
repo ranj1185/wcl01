@@ -134,7 +134,7 @@
     
 - name: Extract foo.tgz into /var/lib/foo
   unarchive:
-    src: /cyberark/RHELinux\ x64-Rls-v10.5.zip
+    src: /cyberark/RHELinux x64-Rls-v10.5.zip
     dest: /cyberark/RHELinux64Rls-v10.5
     remote_src: yes
   tags: ['linux']
