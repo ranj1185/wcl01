@@ -107,7 +107,7 @@
     name: awscli
   tags: ['linux']
     
-- name: check if lsb_release is installed 
+- name: check if pip is installed 
   command : pip --version
   tags: ['linux']
   
@@ -118,4 +118,4 @@
     dest: /cyberark/RHELinux x64-Rls-v10.5.zip
     mode: get
     overwrite: different
-    tags: ['linux']
+  tags: ['linux']
