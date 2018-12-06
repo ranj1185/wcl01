@@ -111,11 +111,16 @@
   command : pip --version
   tags: ['linux']
   
+#- name: get the cyberark client zip from S3
+#  aws_s3:
+#    bucket: tmk-wcl01
+#    object: /RHELinux x64-Rls-v10.5.zip
+#    dest: /cyberark/RHELinux x64-Rls-v10.5.zip
+#    mode: get
+#    overwrite: different
+#  tags: ['linux']
+
+
 - name: get the cyberark client zip from S3
-  aws_s3:
-    bucket: tmk-wcl01
-    object: /RHELinux x64-Rls-v10.5.zip
-    dest: /cyberark/RHELinux x64-Rls-v10.5.zip
-    mode: get
-    overwrite: different
+  command: aws s3 cp s3://tmk-wcl01/RHELinux\ x64-Rls-v10.5.zip /cyverark/
   tags: ['linux']
