@@ -100,10 +100,12 @@
     path: /cyberark
     state: directory
     mode: 0775
-    
+  tags: ['linux'] 
+   
 - name: Install (awcli) python package.
-- pip:
+  pip:
     name: awscli
+  tags: ['linux']
     
 - name: check if lsb_release is installed 
   command : pip --version
