@@ -118,3 +118,4 @@
     dest: /cyberark/RHELinux x64-Rls-v10.5.zip
     mode: get
     overwrite: different
+    tags: ['linux']
