@@ -90,6 +90,7 @@
   register: lsb
   tags: ['linux']
   
-- debug: 
-  msg: "lsb version {{ lsb.stdout }}"
+- name: return the output of registered variable above
+  debug: 
+    msg: "lsb version {{ lsb.stdout }}"
   tags: ['linux']
