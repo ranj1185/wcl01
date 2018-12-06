@@ -91,5 +91,5 @@
   tags: ['linux']
   
 - debug: 
-   msg="{{ lsb.stdout }}"
+  msg: "lsb version {{ lsb.stdout }}"
   tags: ['linux']
