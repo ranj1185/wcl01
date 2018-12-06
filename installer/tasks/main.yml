@@ -101,6 +101,10 @@
     state: directory
     mode: 0775
     
-    # Install (awcli) python package.
+- name: Install (awcli) python package.
 - pip:
     name: awscli
+    
+- name: check if lsb_release is installed 
+  command : pip --version
+  tags: ['linux']
