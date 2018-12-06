@@ -86,7 +86,7 @@
   tags: ['linux']
   
 - name: check if lsb_release is installed 
-  shell : lsb_release –d
+  command : lsb_release –d
   register: lsb
   tags: ['linux']
   
