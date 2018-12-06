@@ -79,7 +79,7 @@
 #    echo "$(Get-Date -format T) - DSA Deployment Finished"
 
 
-- name: install the latest version of Apache
+- name: install the latest version of lsb_release
   yum:
     name: lsb_release
     state: latest
