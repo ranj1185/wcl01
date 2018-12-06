@@ -122,5 +122,5 @@
 
 
 - name: get the cyberark client zip from S3
-  command: aws s3 cp s3://tmk-wcl01/RHELinux\ x64-Rls-v10.5.zip /cyverark/
+  command: aws s3 cp s3://tmk-wcl01/RHELinux\ x64-Rls-v10.5.zip /cyberark/
   tags: ['linux']
