@@ -95,7 +95,6 @@
     msg: "lsb version {{ lsb.stdout }}"
   tags: ['linux']
 
-
 - name: Creates directory
   file:
     path: /cyberark
