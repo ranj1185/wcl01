@@ -81,7 +81,7 @@
 
 - name: install the latest version of lsb_release
   yum:
-    name: lsb_release
+    name: redhat-lsb
     state: latest
   tags: ['linux']
   
