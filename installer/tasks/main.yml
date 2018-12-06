@@ -124,3 +124,10 @@
 - name: get the cyberark client zip from S3
   command: aws s3 cp s3://tmk-wcl01/RHELinux\ x64-Rls-v10.5.zip /cyberark/
   tags: ['linux']
+  
+  
+- name: Extract foo.tgz into /var/lib/foo
+  unarchive:
+    src: /cyberark/RHELinux\ x64-Rls-v10.5.zip
+    dest: /cyberark/RHELinux64Rls-v10.5
+  tags: ['linux']
