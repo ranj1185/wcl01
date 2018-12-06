@@ -141,7 +141,7 @@
   
 - name: make the Creds file executable  
   file:
-     path: /cyberark/RHELinux64Rls-v10.5/RHELinux/CreateCredFile
+     path: /cyberark/RHELinux64Rls-v10.5/RHELinux x64/CreateCredFile
      mode: 0777
   tags: ['linux']
   tags: ['current']
